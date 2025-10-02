@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name=" viewport"
+        content="width=device-width, initial-scale=1"/>
+        <title>Text Search</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <main class="page">
+            <header class="page_header">
+                <h1> Search </h1>
+                <label class="search" aria-label="Article search">
+                    <input id="q" type="search" placeholder="type a keyword or phrase..."
+                    autocomplete="off"/>
+                    <button id="clear" type="button" title="clear search" aria-label="clear search">x</button>
+                </label>
+                <p id="count" class="count" aria-live="polite"> Type to search..</p>
+            </header>
+            <section id="results" class="results" aria-label="search results"></section>
+        </main>
+        <template id="result-tpl">
+            <article class="card">
+                <div class="card_meta">
+                    <time class="card_date"></time>
+                </div>
+                <h2 class="card_title"></h2>
+                <p class="card_excerpt"></p>
+            </article>
+        </template>
+        <script src="main.js" defer></script>
+    </body>
+</html>
